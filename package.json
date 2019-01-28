@@ -1,0 +1,9 @@
+{
+  "name": "redux-generate",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "repository": "https://github.com/TimSusa/redux-generate.git",
+  "author": "TimSusa <timmsusa@googlemail.com>",
+  "license": "MIT",
+  "private": false
+}
