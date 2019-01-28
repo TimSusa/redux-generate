@@ -16,9 +16,9 @@ npm i --save redux-generate
 
 # Usage
 
-[x] Create a folder, where your actions should be generated
+- Create a folder, where your actions should be generated
 
-[x] Create a file "my-custom-action.js" in that folder, which should look kind of this:
+- Create a file "my-custom-action.js" in that folder, which should look kind of this:
 
 ``` 
 import { generateActions, createActionTypes } from 'generate-actions'
