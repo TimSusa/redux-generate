@@ -1,16 +1,16 @@
-# redux-generate-actions
+# redux-generate
 Tiny library that generates actions out of your types
 
 # Install
 
 ```
-yarn
+yarn add redux-generate
 ``` 
 
 or 
 
 ``` 
-npm i
+npm i --save redux-generate
 ```
 
 
