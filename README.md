@@ -46,7 +46,7 @@ doSomething()
 - Create a file: "my-custom-reducer.js", which should look like this:
 
 ``` 
-import {generateReducers} from 'redux-generate-actions'
+import {generateReducers} from 'redux-generate'
 import { Actions } from '../actions/my-custom-actions.js'
 
 export const reducers = {
