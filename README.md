@@ -88,6 +88,46 @@ export default combineReducers({
 ### Apply store to your app
 After that you can provide the state to your app via store, just like usual: https://redux.js.org/basics/store#store
 
+### Bind Actions to your app (ReactJS)
+In your app, you can bind actions and state to your components as usual.
+
+
+``` 
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
+
+function MyComponent (props) {
+  const { stuff, actions } = props
+  .
+  .
+  .
+  return (
+    <div>Heal the world!</div>
+  )
+}
+
+
+function mapStateToProps({funny: {stuff}}){
+  return {
+    stuff
+  }
+}
+
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(Actions, dispatch)
+  }
+}
+
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MyComponent)
+``` 
+
 
 
 ## Support on Beerpay
