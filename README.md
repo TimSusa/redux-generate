@@ -1,7 +1,7 @@
 # Redux Generate
-Tiny library that generates sync actions and reducers out of giving one source of truth. It can be used together with async actions along "Redux-Thunk"
+Tiny library that generates sync actions and reducers out of giving one source of truth. Of course, it can be used along with async actions via "Redux-Thunk", for example.
 
-## Install
+## Installation
 
 ```
 yarn add redux-generate
@@ -33,7 +33,15 @@ export const Actions = { ...generateActions(ActionTypes)
 }
 
 ```  
-### Create Reducer
+
+You don´t have to implement all the actions for yourself. Redux-Generate will do that for you. Just keep in mind, that later on in your app you can call with your action like this:
+
+``` 
+handleStuff({stuff})
+doSomething()
+``` 
+
+### Create Reducers
 
 - Create a file: "my-custom-reducer.js", which should look like this:
 
@@ -43,6 +51,7 @@ import { Actions } from '../actions/my-custom-actions.js'
 
 export const reducers = {
   [Actions.HANDLE_STUFF](state, action) {
+    const {stuff} = action.payload
     ...
     return state
   },
@@ -59,7 +68,11 @@ export const sliders = generateReducers([], reducers)
 
 ```  
 
+Payload can be accessed as usual via action.payload.
+
+
 ### Combine Reducers (just like usual)
+Best would be an index.js file beneath reducer definitions.
 
 ``` 
 import { combineReducers } from 'redux'
@@ -73,7 +86,7 @@ export default combineReducers({
 ``` 
 
 ### Apply store to your app
-After that you would provide the state to your app via store, just like usual: https://redux.js.org/basics/store#store
+After that you can provide the state to your app via store, just like usual: https://redux.js.org/basics/store#store
 
 
 
