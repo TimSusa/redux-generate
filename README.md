@@ -1,5 +1,5 @@
 # Redux Generate
-Tiny library that generates sync actions and reducers out of giving one source of truth. Of course, it can be used along with async actions via "Redux-Thunk", for example.
+Tiny library that generates sync actions and reducers out of giving one source of truth. You don´t have to implement all the actions for yourself. Redux-Generate will do that for you. Of course, it can be used along with async actions via "Redux-Thunk", for example.
 
 ## Installation
 
@@ -34,7 +34,7 @@ export const Actions = { ...generateActions(ActionTypes)
 
 ```  
 
-You don´t have to implement all the actions for yourself. Redux-Generate will do that for you. Just keep in mind, that later on in your app you can call with your action like this:
+You don´t have to implement all the actions for yourself. Redux-Generate will do that for you. Just keep in mind, that later on in your app you can call your action like this. We do an agreement by simplifying the action to have not more than one parameter, which should be an object or undefined otherwise:
 
 ``` 
 handleStuff({stuff})
