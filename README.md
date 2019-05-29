@@ -1,3 +1,7 @@
+# DEPRECATED
+Please consider to use redux-starter-kit. See for more info here: https://github.com/reduxjs/redux-starter-kit
+
+
 # Redux Generate
 Tiny library that generates sync actions and reducers out of giving one source of truth. You don´t have to implement all the actions for yourself. Redux-Generate will do that for you. Of course, it can be used along with async actions via "Redux-Thunk", for example.
 
